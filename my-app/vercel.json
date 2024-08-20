@@ -3,7 +3,10 @@
     "builds": [
       {
         "src": "src/index.js",
-        "use": "npm run build"
+        "use": "npm run build",
+        "config": {
+          "packageJsonPath": "package.json"
+        }
       }
     ]
   }
