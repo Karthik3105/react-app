@@ -2,11 +2,16 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/index.js",
-        "use": "npm run build",
-        "config": {
-          "packageJsonPath": "package.json"
-        }
+        "src": "index.html",
+        "use": "@vercel/static-build",
+        "config": {}
       }
-    ]
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "index.html"
+      }
+    ],
+    "tag": "build"
   }
